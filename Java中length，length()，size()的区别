@@ -1,0 +1,39 @@
+length，length()，size()的区别
+
+以前在使用的时候，一直都不了解，他们三个的区别，每次都是按“Alt+/”快捷键，补全代码才知道到底使用哪个，后来重点内容具体了解了下，才明白他们之间的区别，现在跟大家分享下，我相信也会有一些朋友们和我有一样的疑惑。
+
+区别如下：
+
+
+length：是针对数组来说的，如果写了一个数组，想要知道数组的长度，则可以使用这个属性；
+length()：是针对字符串String来说的,如果想看这个字符串的长度则用length()这个方法;
+size()：是针对泛型集合来说的，如果想要知道这个泛型集合中有多少元素，即可使用size()这个方法。
+
+
+如下是代码的演示：
+
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test {
+    public static void main(String[] args) {
+
+        char s[]={'2','3','5','4','6','9'};//数组，用length
+        System.out.println(s.length);
+
+        String a="Hello World";//字符串，用length()
+        System.out.println(a.length());
+
+        List<String> a1=new ArrayList<String>();//集合，用size()
+        a1.add("234");//集合中添加了一个元素
+        System.out.println(a1.size());
+
+    }
+结果是：  6  11  1
+--------------------- 
+作者：璐哈路哈呦 
+来源：CSDN 
+原文：https://blog.csdn.net/qq_39650208/article/details/76613044?utm_source=copy 
+版权声明：本文为博主原创文章，转载请附上博文链接！
