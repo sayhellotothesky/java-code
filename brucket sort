@@ -1,0 +1,18 @@
+桶排序（bucket sort）
+基本思想
+桶排序的基本思想是将一个数据表分割成许多buckets，然后每个bucket各自排序，或用不同的排序算法，或者递归的使用bucket sort算法。也是典型的divide-and-conquer分而治之的策略.
+        public static void bucketSort(int[] arr)
+   { if (arr==null||arr.length<2){ return; } //常用写法 
+int max = Integer.MIN_VALUE;//初始化
+for (int i =0;i<arr.length;i++)//取桶长度
+{ max = Math.max(max,arr[i]); }
+int[] bucket = new int[max+1]; 
+for (int i =0;i<arr.length;i++)
+{ //桶数组此下标有数据，数值就加一 bucket[arr[i]]++; }
+int i = 0; 
+for (int j = 0;j<bucket.length;j++)
+{ while (bucket[j]-->0)
+{ arr[i++]=j;
+burcket[j]--;}
+}
+} 
