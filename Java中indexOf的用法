@@ -1,0 +1,19 @@
+java 中indexof()：指定字符在此实例中的第一个匹配项的索引并从指定字符位置开始搜索，检查指定数量的字符位置。其实就是在字符串中，对其子串的查找。
+
+Java中提供了四中查找方法： 
+1、int indexOf(String str) ：返回第一次出现的指定子字符串在此字符串中的索引。  
+2、int indexOf(String str, int startIndex)：从指定的索引处开始，返回第一次出现的指定子字符串在此字符串中的索引。  
+3、int lastIndexOf(String str) ：返回在此字符串中最右边出现的指定子字符串的索引。  
+4、int lastIndexOf(String str, int startIndex) ：从指定的索引处开始向后搜索，返回在此字符串中最后一次出现的指定子字符串的索引。
+
+参数说明： 
+indeOf(String value,int value); 
+String str =”StringValue”; 
+str.indexOf(); 
+indexOf 方法返回一个整数值，指出 String 对象内子字符串的开始位置。如果没有找到子字符串，则返回-1。 
+如果 startindex 是负数，则 startindex 被当作零。如果它比最大的字符位置 索引还大，则它被当作最大的可能索引。
+--------------------- 
+作者：程阳 
+来源：CSDN 
+原文：https://blog.csdn.net/qq_34646449/article/details/73984512?utm_source=copy 
+版权声明：本文为博主原创文章，转载请附上博文链接！
