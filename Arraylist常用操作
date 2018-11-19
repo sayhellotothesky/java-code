@@ -1,0 +1,51 @@
+介绍Arraylist 是一个动态数组，当不能确定数组的大小时使用它，继承自list
+
+1、声明 
+2、遍历 
+3、arraylist转数组array 
+4、增删清空等常用 
+1、 首先是声明
+
+ ArrayList<Integer> mylist= new ArrayList<Integer>();
+1
+2、遍历有三种方式，一般我使用索引
+
+   //通过索引值进行遍历
+         for (int i = 0; i < mylist.size(); i++) {
+             System.out.print(mylist.get(i)+" ");
+
+        }
+         //通过for循环进行遍历还记得我们讲过的增强for循环吗
+         for (Integer num:mylist) {
+             System.out.print(num+" ");
+
+        }
+         //通过迭代器进行遍历
+         System.out.println("通过迭代器进行遍历");
+         Iterator<Integer> it= mylist.iterator();
+         while (it.hasNext()) {
+            System.out.print(it.next()+"");
+         }          
+         3.arraylist to array
+
+   //下面是怎样将arraylist to array有两种方式
+     //第一种是容易理解
+    Integer[] integer1= new Integer[mylist.size()];
+   mylist.toArray(integer1);
+   //第二种
+   Integer []integer2 = mylist.toArray(new Integer[0]);//不太理解
+   4、增删清空等常用
+
+     //下面是一些常用的操作
+         mylist.add(6);
+         mylist.remove(1);//移除某一个索引处的一个东西
+         mylist.remove((Object)3);//移除某一个对象        
+
+         System.out.println("是否包含5"+mylist.contains(5));//判断是否包含5
+         mylist.clear();//清空
+         System.out.println("是否为空"+mylist.isEmpty());//判断是否包含5        
+--------------------- 
+作者：淸沙 
+来源：CSDN 
+原文：https://blog.csdn.net/zy20120580223/article/details/80294717 
+版权声明：本文为博主原创文章，转载请附上博文链接！
