@@ -1,0 +1,22 @@
+cd ..                  返回上一级目录
+
+cd ../..               返回上两级目录
+
+cd或cd ~           返回home目录
+
+cd - 目录名       返回指定目录
+可以使用cat创建一个新的文件
+
+　　命令：cat>>filename
+
+　　使用cat创建文件时，以系统默认的文件属性作为新文件的属性，并接受键盘输入作为文件的内容。输入结束时按Ctrl+d退出并保存文件。
+
+　　使用touch命令创建文件
+
+　　首先，touch命令用的并不多，主要用于修改指定文件的访问和修改时间属性（Update the access and modification times of each FILE to the current time）。
+
+　　当文件不存在时，则创建一个新的文件。touch只能创建空文件。
+
+　　touch filename 以当前时间作为访问和修改时间属性值创建一个文件。
+
+　　touche -r existfilename filename 根据existfilename的访问和修改时间属性确定filename的访问和修改时间属性
