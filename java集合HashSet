@@ -1,0 +1,49 @@
+HashSet的一些常用方法：
+
+添加元素：
+
+hashset.add(E e)：返回boolean型，如果此 set 中尚未包含指定元素，则添加指定元素；如果此 set 已包含该元素，则该调用不更改 set 并返回 false。
+
+删除元素：
+
+hashset.clear()：从此 set 中移除所有元素。
+
+hashset.remove(Object o)：如果指定元素存在于此 set 中，则将其移除。
+
+hashset.isEmpty()：如果此 set 不包含任何元素，则返回 true。
+
+hashset.contains(Object o)：如果此 set 包含指定元素，则返回 true。
+
+hashset.size()：返回此 set 中的元素的数量（set 的容量）。
+--------------------- 
+Iterator it = hashset.iterator();
+		while(it.hasNext())
+		{
+			Object obj = it.next();
+			if(obj instanceof Integer)
+			{
+				 System.out.println("Integer:"+obj);
+			}
+			if(obj instanceof String)
+			{
+				 System.out.println("String:"+obj);
+			}
+			if(obj instanceof Character)
+			{
+				 System.out.println("Character:"+obj);
+			}
+			if(obj instanceof int[])
+			{
+				System.out.print("int[]:");
+				for(int i=0;i<abc.length;i++)
+				{
+					System.out.print(abc[i]+" ");
+				}
+			}
+		}
+  利用迭代器遍历Hashset 集合
+--------------------- 
+作者：亭之翼 
+来源：CSDN 
+原文：https://blog.csdn.net/tingzhiyi/article/details/52152487 
+版权声明：本文为博主原创文章，转载请附上博文链接！
