@@ -1,0 +1,49 @@
+java的switch-case语句格式如下：
+
+		switch(参数) {
+			case 常量表达式1: break;
+			case 常量表达式2: break;
+			...
+			default: break;
+		}
+
+注意的地方：
+switch接受的参数类型有10种，分别是基本类型的byte,short,int,char，以及引用类型的String(只有JavaSE 7 和以后的版本 可以接受String类型参数),enum和byte,short,int,char的封装类Byte,Short,Integer,Character
+
+case 后紧跟常量表达式，不能是变量。
+
+default语句可有可无，如果没有case语句匹配，default语句会被执行。
+
+case语句和default语句后的代码可不加花括号。
+
+如果某个case语句匹配，那么case后面的语句块会被执行，并且如果后面没有break关键字，会继续执行后面的case语句代码和default，直到遇见break或者右花括号。
+
+default 后无需跟常量表达式。
+
+
+特殊例子：
+
+		String msg = "dragon";
+		
+		switch(msg) {
+		case "rabbit": System.out.println("rabbit ");
+		case "dragon": System.out.println("happy new year");
+		default:System.out.println("what ?");
+		case "monkey": System.out.println("monkey");break;
+		case "viper" : System.out.println("dokudoku!!");
+		}
+
+
+输出结果：
+
+happy new year
+what ?
+monkey
+
+
+上面例子说明了两个问题，第一个是不加break的后果，第二个是default的位置影响。
+--------------------- 
+作者：czjuttsw 
+来源：CSDN 
+原文：https://blog.csdn.net/tounaobun/article/details/8485832 
+版权声明：本文为博主原创文章，转载请附上博文链接！
