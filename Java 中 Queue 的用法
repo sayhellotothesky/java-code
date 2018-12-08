@@ -3,7 +3,31 @@ remove() ：移除队首元素，若移除成功，则返回true；如果移除�
 offer(E e) ：将元素e插入到队列末尾，如果插入成功，则返回true；如果插入失败（即队列已满），则返回false；
 poll() ：移除并获取队首元素，若成功，则返回队首元素；否则返回null；
 peek() ：获取队首元素，若成功，则返回队首元素；否则返回null
---------------------- 
+BlockingQueue 队列常用的操作方法:
+
+      1.往队列中添加元素: add(), put(), offer()
+
+      2.从队列中取出或者删除元素: remove() element()  peek()   poll()  take()
+
+每个方法的说明如下：
+
+      offer()方法往队列添加元素如果队列已满直接返回false,队列未满则直接插入并返回true;
+
+      add()方法是对offer()方法的简单封装.如果队列已满,抛出异常new IllegalStateException("Queue full");
+
+       put()方法往队列里插入元素,如果队列已经满,则会一直等待直到队列为空插入新元素,或者线程被中断抛出异常.
+
+       remove()方法直接删除队头的元素:
+
+       peek()方法直接取出队头的元素,并不删除.
+
+       element()方法对peek方法进行简单封装,如果队头元素存在则取出并不删除,如果不存在抛出异常NoSuchElementException()
+
+       poll()方法取出并删除队头的元素,当队列为空,返回null;
+
+       take()方法取出并删除队头的元素,当队列为空,则会一直等待直到队列有新元素可以取出,或者线程被中断抛出异常
+
+　　offer()方法一般跟pool()方法相对应, put()方法一般跟take()方法相对应.日常开发过程中offer()与pool()方法用的相对比较频繁.
 作者：麦田 
 来源：CSDN 
 原文：https://blog.csdn.net/itmyhome1990/article/details/73224490 
