@@ -9,17 +9,11 @@ ArrayList实现了List的接口，实现了可变大小的数组，随机访问�
 常用方法总结
 构建ArrayList
 1.不初始化起容量
-
 ArrayList al = new ArrayList();//默认容量为0，当数组容量满时数组会自动一当前数组容量的2倍扩容
-1
 2.初始化容量
-
 ArrayList al = new ArrayList(3);//初始容量为3
-1
 3.以一个集合或数组初始化
-
 ArrayList al = new ArrayList(a);//a为集合或数组
-1
 添加元素
 //1.ArrayList名.add(object value)
 ArrayList al = new ArrayList();
@@ -27,31 +21,17 @@ al.add("a");
 
 //2.将元素插入到索引处(不过其有一定的限制性,必须在数组长度以内插入数组)
 al.insert(int index,object value);
-1
-2
-3
-4
-5
-6
 删除元素
 al.Remove(object obj);//移除数组中的obj元素
 
 al.RemoveAt(int index);//移除索引为index的数字元素
 
 al.RemoveRange(int indext,int count);//移除从索引index开始，移除count个元素
-1
-2
-3
-4
-5
-6
 查找元素
 查找元素有Contains（）、IndexOf（）、LastIndexOf（）3中方法
 
 //boolean contains(Object o)
 al.Contains(object obj);//查找数组中是否有obj元素，返回类型为boolean存在返回true；
-1
-2
 IndexOf（）有两个重载方法 起用法如下：
 
 //int indexOf(Object o)
@@ -60,36 +40,21 @@ al.IndexOf(object obj);//从0开始查找obj元素，只第一个obj元素，并
 al.IndexOf(object obj, int startIndex); //从startIndex开始查找obj元素，只第一个obj元素，并返回起在数组中的位置，
 
 al.IndexOf(object obj, int startIndex, int count); //从startIndex开始想后查找count个元素，如果存在obj元素，则返回其在数组中的位置
-1
-2
-3
-4
-5
-6
-7
 al.LastIndexOf()方法与IndexOf（）用法相同，它也有两个重载，其不同的是，LastIndexOf（obj）是查找要obj最后出现的位置
 
 获取元素
 al.get(index);
-1
 获取ArrayList数组长度
 al.size();
-1
 检查是否为空
 //boolean isEmpty()
 al.isEmpty();
-1
-2
 遍历ArrayList
-1.获取数组长度，循环遍历
-
+获取数组长度，循环遍历
 for(int i = 0, i < al.size(); i++){
 
 }
-1
-2
-3
-2.使用for-each循环
+使用for-each循环
 
 for(object e : al){
 
