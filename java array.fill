@@ -1,0 +1,49 @@
+Java API  中的
+
+Fill    public static void fill(Object[] a,  int fromIndex,  int toIndex,   Object val)将指定的 Object 引用分配给指定 Object 数组指定范围中的每个元素。填充的范围从索引 fromIndex（包括）一直到索引 toIndex（不包括）。（如果 fromIndex==toIndex，则填充范围为空。） 
+
+参数：
+a - 要填充的数组
+fromIndex - 要使用指定值填充的第一个元素的索引（包括）
+toIndex - 要使用指定值填充的最后一个元素的索引（不包括）
+val - 要存储在数组的所有元素中的值 
+抛出： 
+IllegalArgumentException - 如果 fromIndex > toIndex 
+ArrayIndexOutOfBoundsException - 如果 fromIndex < 0 或 toIndex > a.length 
+ArrayStoreException - 如果指定值不是可存储在指定数组中的运行时类型
+
+ 
+
+ 
+
+举几个例子：
+
+Arrays.fill（ a1, value ）;
+
+a1是一个数组变量，value是一个a1中元素数据类型的值，作用：填充a1数组中的每个元素都是value
+
+boolean[] a1 = new boolean[5];
+Arrays.fill( a1,true );
+结果 a1[] = {true,true,true,true,true};
+
+
+
+String[] a = new String[6];
+Arrays.fill(a, "Hello");
+Arrays.fill(a, 3, 5,"World");
+结果是 a[] = {Hello,Hello,Hello,World,World,Hello};
+
+ 
+
+第一个参数指操作的数组，第二个和第三个指在该数组的某个区域内插入第四个参数，
+
+一定要注意:1.java的数组下标从0开始
+
+                     2.第二个参数指起始元素下标(包括该下标)
+
+                     3.第三个参数指结束下标(不包括该下标)
+--------------------- 
+作者：the_lab_the_boy 
+来源：CSDN 
+原文：https://blog.csdn.net/the_lab_the_boy/article/details/41510463 
+版权声明：本文为博主原创文章，转载请附上博文链接！
