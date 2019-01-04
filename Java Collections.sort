@@ -99,38 +99,7 @@ public class Student implements Comparable<Student> {
         return "Student{" +
                 "id=" + id +
                 ", age=" + age +
-                ", name='" + name + '\'' +
-                '}';
-    }
-}
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-这里说一下重写的 public int compareTo(Student o){} 这个方法，它返回三种 int 类型的值： 负整数，零 ，正整数。
+                ", name='" + name + '\'' 这里说一下重写的 public int compareTo(Student o){} 这个方法，它返回三种 int 类型的值： 负整数，零 ，正整数。
 
 返回值	含义
 负整数	当前对象的值 < 比较对象的值 ， 位置排在前
@@ -154,28 +123,7 @@ public static void main(String args[]){
         System.out.println("默认排序后:");
         for (Student student : list) {
             System.out.println(student.toString());
-        }
-}
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-输出日志：
+        输出日志：
 排序前:
 Student{id=1, age=25, name='关羽'}
 Student{id=2, age=21, name='张飞'}
@@ -190,20 +138,6 @@ Student{id=2, age=21, name='张飞'}
 Student{id=1, age=25, name='关羽'}
 Student{id=4, age=32, name='袁绍'}
 Student{id=5, age=36, name='赵云'}
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
 比较器的使用
 这个时候需求又来了，默认是用 age 排序，但是有的时候需要用 id 来排序怎么办？ 这个时候比较器 ：Comparator 就排上用场了。
 
