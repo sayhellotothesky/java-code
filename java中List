@@ -1,0 +1,8 @@
+.list中添加，获取，删除元素；
+添加方法是：.add(e)；　　获取方法是：.get(index)；　　删除方法是：.remove(index)； 按照索引删除；　　.remove(Object o)； 按照元素内容删除；
+list中是否包含某个元素；
+方法：.contains（Object o）； 返回true或者false
+list中根据索引将元素数值改变(替换)；
+注意 .set(index, element); 和 .add(index, element); 的不同；
+利用list中索引位置重新生成一个新的list（截取集合）；
+方法： .subList(fromIndex, toIndex)；　　.size() ； 该方法得到list中的元素数的和
