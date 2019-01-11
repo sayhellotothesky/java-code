@@ -57,8 +57,8 @@ for(int i = 0, i < al.size(); i++){
 使用for-each循环
 
 for(object e : al){
-
 }
+set(index: int, o: E): E	设置指定index处的元素为o
 --------------------- 
 作者：lynalmost 
 来源：CSDN 
