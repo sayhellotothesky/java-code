@@ -1,0 +1,9 @@
+Arrays类是JDK提供的专门用于操作数组的工具类，位于java.util包中。
+用Arrays类的方法操作数组，无需自己编码。
+Arrays类的常用方法：
+1、boolean equals(array1,array2)：比较两个数组是否相等。
+2、void sort(array):对数组array的元素进行升序排列
+3、String toString(array)：把数组array转换成一个字符串。
+4、void fill(array,val)：把数组array所有元素都赋值为val
+5、int binarySearch(array,val):查询元素值val在数组array中的下标。
+6、copyof(array,length)：把数组array复制成一个长度为length的新数组。
