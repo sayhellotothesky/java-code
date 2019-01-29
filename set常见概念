@@ -1,0 +1,37 @@
+集合Set
+Set:注重独一无二的性质,该体系集合可以知道某物是否已近存在于集合中,不会存储重复的元素
+用于存储无序(存入和取出的顺序不一定相同)元素，值不能重复。
+Java中使用Set接口描述一个集合（集合不允许有“重复值”，注意重复的概念），集合Set是Collection的子接口，Set不允许其数据元素重复出现，也就是说在Set中每一个数据元素都是唯一的。Set接口定义的常用方法如下：
+序号	方法	描述
+1	size()	获取Set尺寸（即Set包含数据元素的总数）
+2	add(Object obj)	向Set中添加数据元素obj
+3	remove(Object obj)	从Set中移除数据元素obj
+4	contains(Object obj)	判断当前Set中是否包含数据元素obj，如果包含返回true，否则返回false
+5	iterator()	将Set装入迭代器
+Set接口的交集、并集、差集运算
+
+序号	方法	描述
+1	addAll(Collection c)	向Set中添加c包含的全部数据元素（并集）
+2	removeAll(Collection c)	从Set中移除c包含的全部数据元素（差集）
+3	retainAll(Collection c)	求Set和c的交集
+4	containsAll(Collection c)	判断Set是否包含c中的全部数据元素，如果全部包含返回true，否则返回false
+HashSet（散列集）
+HashSet通过Hash算法排布集合内的元素，所谓的Hash算法就是把任意长度的输入（又叫做预映射），通过散列算法，变换成固定长度的输出，该输出就是散列值。这种转换是一种压缩映射。对于不同类型的信息，其散列值公式亦不完全相同。
+
+当我们使用HashSet存储自定义类时，需要在自定义类中重写equals和hashCode方法，主要原因是集合内不允许有重复的数据元素，在集合校验元素的有效性时（数据元素不可重复），需要调用equals和hashCode验证。
+
+HashSet在判断数据元素是否重复时，有两个步骤，注意先后顺序（此处可以看一看我的另一篇博客：浅析Java中的hashcode方法）：
+
+先检查hashCode值是否与集合中已有相同。
+如果hashCode相同再调用equals方法进一步检查。（equals返回真表示重复）
+TreeSet（树集）
+TreeSet是一个有序集合，其元素按照升序排列，默认是按照自然顺序排列，也就是说TreeSet中的对象元素需要实现Comparable接口来实现自比较功能。TreeSet类中跟HashSet类一样也没有get()方法来获取指定位置的元素，所以也只能通过迭代器方法来获取。
+
+TreeSet虽然是有序的，但是并没有具体的索引，当插入一个新的数据元素的时候，TreeSet中原有的数据元素可能需要重新排序，所以TreeSet插入和删除数据元素的效率较低。
+
+当我们使用TreeSet存储自定义类时，需要在自定义类实现Comparable接口并重写其compareTo方法，以提供比对形式，否在TreeSet不能对用户自定义的类型进行正确的树状排序。
+--------------------- 
+作者：Season In The Sun 
+来源：CSDN 
+原文：https://blog.csdn.net/sinat_37976731/article/details/78817540 
+版权声明：本文为博主原创文章，转载请附上博文链接！
