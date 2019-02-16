@@ -1,0 +1,14 @@
+Main方法是Java程序的入口，记住，我们这里不会讨论Servlet、MIDlet和其他任何容器管理的java程序，在java核心编程中，JVM会查找类中的public static void main(String[] args)，如果找不到该方法就抛出错误NoSuchMethodError:main 程序终止。
+Main方法必须严格遵循它的语法规则，方法签名必须是public static void，参数是字符串数组类型，如果是Java1.5及以后的版本还可以使用可变参数：
+public  static void main(String... args)
+为什么main方法是静态的（static）
+正因为main方法是静态的，JVM调用这个方法就不需要创建任何包含这个main方法的实例。
+因为C和C++同样有类似的main方法作为程序执行的入口。
+如果main方法不声明为静态的，JVM就必须创建main类的实例，因为构造器可以被重载，JVM就没法确定调用哪个main方法。
+静态方法和静态数据加载到内存就可以直接调用而不需要像实例方法一样创建实例后才能调用，如果main方法是静态的，那么它就会被加载到JVM上下文中成为可执行的方法。
+为什么main方法是公有的（public）
+Java指定了一些可访问的修饰符如：private、protected、public，任何方法或变量都可以声明为public，Java可以从该类之外的地方访问。因为main方法是公共的，JVM就可以轻松的访问执行它。
+
+为什么main方法没有返回值（Void） 
+
+因为main返回任何值对程序都没任何意义，所以设计成void，意味着main不会有任何值返回
